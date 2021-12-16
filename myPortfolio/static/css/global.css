@@ -1,0 +1,96 @@
+p {
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.corPrimaria {
+    background-color: #0C1B2F;
+}
+
+navbar {
+    position: fixed;
+}
+
+.subtitulo {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: .1em;
+    margin-bottom: 60px;
+}
+
+.subtitulo:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 8px auto;
+}
+
+.foto-perfil {
+    height: 100%;
+    max-width: auto;
+    border-radius: 50%;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: black !important;
+}
+
+
+.itemMenu {
+    color: #000;
+}
+
+.lead, .navbar-nav  {
+    text-transform: uppercase;
+}
+
+.navbar-toggler {
+    color: #fff !important;
+}
+
+/* CArds */
+:root {
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+  }
+  
+  body {
+    background: #111 !important;
+  }
+  
+  .card {
+    background: #222;
+    border: 1px solid #dd2476;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    border: 5px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-image-source:  var(--gradient) !important; 
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+    background: var(--gradient) !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
