@@ -47,5 +47,6 @@ def home_view(request):
     return render(request, template_name='home.html', context=context, status=200)
 
 
-def list_projects(request, id=None):
-    pass
+def about(request):
+    
+    return render(request, template_name='about.html', status=200)

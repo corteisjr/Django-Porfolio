@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color:#fff">
-            <a class="navbar-brand" href="#" style=color:#000>ARCÉNIO CARLOS CORTEIS</a>
+            <a class="navbar-brand" href="/" style=color:#000>ARCÉNIO CARLOS CORTEIS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                     </li>
     
                     <li>
-                        <a href="#sobre-mim" class="nav-link" style=color:#000>Sobre mim</a>
+                        <a href="{% url 'about' %}" class="nav-link" style=color:#000>Sobre mim</a>
                     </li>
     
                     <li>
@@ -45,7 +45,20 @@
             </div>
         </nav>
     </header>
-    
+    <section class="jumbotron text-center corPrimaria">
+        <div class="container">
+            <a href="/"><img src="{% static 'img/perfil.jpeg' %}" class="foto-perfil" alt="Arcénio Corteis" width='200'></a>
+            <h1 class="jumbotron-heading" style="color:#fff;text-transform: uppercase;">Arcénio Corteis</h1>
+            <p class="lead" style="color:#fff !important;">Desenvolvedor web - Criador de conteúdos - Eterno estudante 
+            </p>
+            <p>
+                <a href="#contato" class="btn btn-dark my-2">CONTACTO</a>
+            </p>
+            <a href="https://github.com/corteisjr"><i style="color:#fff" class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/arcenio-corteisjr"><i style="color:#fff" class="fab fa-linkedin"></i></a>
+            <a href="#"><i style="color:#fff" class="fab fa-instagram"></i></a>
+        </div>
+    </section>
     {% block content %}
         
     {% endblock content %}

@@ -98,3 +98,9 @@ p {
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
   }
+
+  /* Tecnologias */
+
+  .tecnologias {
+      margin: 0 auto;
+  }
