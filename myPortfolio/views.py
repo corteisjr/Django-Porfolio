@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from myPortfolio.models import *
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -29,8 +30,18 @@ def home_view(request):
     
     if projectType is not None:
         projects = projects.filter(projectType__id=projectType)
+    
+    if len(projects) > 0:
+        paginator = Paginator(projects, 6)
+        page = request.GET.get('page')
+        projects = paginator.get_page(page) 
+    
+    get_copy = request.GET.copy()
+    parameters = get_copy.pop('page', True) and get_copy.urlencode()   
+    
     context = {
-        'projects': projects
+        'projects': projects,
+        'parameters': parameters
     }
     
     return render(request, template_name='home.html', context=context, status=200)

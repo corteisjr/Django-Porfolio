@@ -10,6 +10,10 @@ navbar {
     position: fixed;
 }
 
+.navigation {
+    margin: 0 auto;
+}
+
 .subtitulo {
     font-weight: bold;
     font-size: 24px;

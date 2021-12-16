@@ -41,15 +41,33 @@
                           <h5 class="card-title">{{project.title}}</h5>
                           <p class="card-subtitle mb-2 text-muted h6">{{project.subtitle}}</p>
                           <p class="card-text text-white">{{project.content}}</p>
-                          <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-                          <a href="#" class="btn "><i class="fab fa-github"></i> Github</a>
+                          <a href="{{project.link}}" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
+                          <a href="{{project.gitHub_link}}" class="btn "><i class="fab fa-github"></i> Github</a>
+                          <div class="text-center mt-2">
+                          <small class="text-muted">{{project.projectType}}</small>
+                        </div>
                     </div>
                 </div>
         </div>
-        {% endfor %}
-
-        
-            
+        {% endfor %}              
+    </div>
+    <div class="row">
+        <nav aria-label="Page navigation" class="navigation">
+            <ul class="pagination">
+                
+                {% if projects.has_previous %}
+                    <li class="page-item"><a href="?page=1{{parameters}}" class="page-link">&laquo; Primeiro</a></li>
+                    <li class="page-item"><a href="?page={{projects.previous_page_number}} {{ parameters}}" class="page-link">Anterior</a></li>
+                {% endif %}
+                <li class="page-item"><a href="#" class="page-link">Página {{ projects.number }} de {{ projects.paginator.num_pages}}</a></li>
+                
+                {% if projects.has_next %}
+                    <li class="page-item"><a href="?page={{projects.next_page_number}} {{ parameters }}" class="page-link">Próximo</a></li>
+                    <li class="page-item"><a href="?page={{ projects.paginator.num_pages }} {{ parameters }}" class="page-link">Último &raquo;</a></li>
+                {% endif %}
+                    
+            </ul>
+        </nav>
     </div>
 </div>
 <section class="container">
