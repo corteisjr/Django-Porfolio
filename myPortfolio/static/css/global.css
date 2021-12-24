@@ -104,3 +104,14 @@ p {
   .tecnologias {
       margin: 0 auto;
   }
+
+  /* Footer */
+
+  footer {
+      background-color: #111;
+  }
+
+  footer p {
+    color: #fff !important;
+    margin-top: 20px;
+  }

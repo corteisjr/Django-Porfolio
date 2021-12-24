@@ -1,8 +1,10 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from myPortfolio.models import *
 from django.db.models import Q
 from django.core.paginator import Paginator
+from .forms import ContactForm
+from django.core.mail import send_mail, BadHeaderError
 
 # Create your views here.
 
@@ -50,3 +52,32 @@ def home_view(request):
 def about(request):
     
     return render(request, template_name='about.html', status=200)
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = "Fale comigo"
+            body = {
+                'first_name': form.cleaned_data['first_name'],
+                'last_name': form.cleaned_data['last_name'],
+                'email': form.cleaned_data['email_address'],
+                'message': form.cleaned_data['message']
+            }
+            
+            message = "\n".join(body.values())
+            
+            try:
+                send_mail(subject, message, 'corteisjunior@gmail.com', ['corteisjunior@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse("Invalid header found.")
+            return redirect("/")
+        
+    form = ContactForm()
+    
+    context = {
+        'form': form
+    }
+    
+    return render(request, template_name='contact.html', context=context,  status=200)
+                            

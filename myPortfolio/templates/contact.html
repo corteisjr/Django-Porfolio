@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="py-5 bg-light">
+    <h2 class="subtitulo">Fale comigo</h2>
+    
+    <form action="" method="post" class="form-control  rounded p-4 container mb-5">
+        <div class="form-group row col-md-4 col-2">
+        {% csrf_token %}
+        {{form.as_p}}
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+{% endblock content %}
+    

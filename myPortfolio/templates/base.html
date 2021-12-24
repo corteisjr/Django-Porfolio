@@ -31,7 +31,7 @@
                         <a href="#projetos" class="nav-link" style=color:#000> Projetos</a>
                     </li>
                     <li>
-                        <a href="#contato" class="nav-link" style=color:#000>Contato</a>
+                        <a href="{% url 'contact' %}" class="nav-link" style=color:#000>Contato</a>
                     </li>
     
                     <li>
@@ -62,9 +62,8 @@
     {% block content %}
         
     {% endblock content %}
-     <footer class="text-center">
-        <p style="margin:0px;padding-top:15px;padding-bottom:15px;color:#000 !important">Copyright - 2020 - Corteisjr
-        </p>
+     <footer class="text-center text-white fixed-bottom">
+        <p>Copyright  &copy; <script>document.write(new Date().getFullYear())</script> - Corteisjr</p>
      </footer>
      
 
