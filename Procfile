@@ -1,1 +1,1 @@
-web: gunicorn CorteisPortfolio.wsggi
+web: gunicorn CorteisPortfolio.wsgi
