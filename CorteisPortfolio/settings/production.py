@@ -3,7 +3,7 @@ from .settings import *
 
 DEBUG = True
 
-SECRET_KEY = 'wuhtvjn_8*#(99h^w4n5^r9%_b!ub8j#x%=1g&c$he$el@^7w^'
+
 ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {

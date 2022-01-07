@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uth8coe^over)0(@^yp)3h5f!6!)66@$ojj_$8wn^*-!&fhh*5'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,3 +124,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 import django_on_heroku
 django_on_heroku.settings(locals())
+
+# Secret Key
+
+from decouple import config
+
+SECRET_KEY = config("SECRET_KEY")
