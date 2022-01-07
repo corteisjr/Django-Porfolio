@@ -43,7 +43,7 @@ def home_view(request):
     
     context = {
         'projects': projects,
-        'parameters': parameters
+        'parameters': parameters,
     }
     
     return render(request, template_name='home.html', context=context, status=200)

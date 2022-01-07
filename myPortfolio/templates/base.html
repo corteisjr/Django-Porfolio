@@ -28,9 +28,6 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li>
-                        <a href="#projetos" class="nav-link" style=color:#000> Projetos</a>
-                    </li>
-                    <li>
                         <a href="{% url 'contact' %}" class="nav-link" style=color:#000>Contato</a>
                     </li>
     
@@ -52,11 +49,11 @@
             <p class="lead" style="color:#fff !important;">Desenvolvedor web - Criador de conteúdos - Eterno estudante 
             </p>
             <p>
-                <a href="#contato" class="btn btn-dark my-2">CONTACTO</a>
+                <a href="{% url 'contact' %}" class="btn btn-dark my-2">CONTACTO</a>
             </p>
             <a href="https://github.com/corteisjr"><i style="color:#fff" class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/arcenio-corteisjr"><i style="color:#fff" class="fab fa-linkedin"></i></a>
-            <a href="#"><i style="color:#fff" class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/corteis_junior/"><i style="color:#fff" class="fab fa-instagram"></i></a>
         </div>
     </section>
     {% block content %}

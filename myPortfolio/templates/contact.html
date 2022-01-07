@@ -2,16 +2,29 @@
 
 
 {% block content %}
-<div class="py-5 bg-light">
-    <h2 class="subtitulo">Fale comigo</h2>
-    
-    <form action="" method="post" class="form-control  rounded p-4 container mb-5">
-        <div class="form-group row col-md-4 col-2">
-        {% csrf_token %}
-        {{form.as_p}}
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+<div class="my-5 text-center white">
+    <span class="h6 d-block text-white">Vamos Conversar?</span>
+    <h1 class="display-4 text-primary">Fale comigo</h1>
 </div>
+
+<div class="row container">
+    <div class="col-lg mb-5">
+        <form action="" class="bg-light rounded p-4 box-shadow">
+            <div class="form-group">
+                <label for="clienteNome">Nome</label>
+                <input type="text" class="form-control" id="clienteNome">
+              </div>
+
+            <div class="form-group">
+                <label for="clienteEmail">Email</label>
+                <input type="email" class="form-control" id="clienteEmail">
+              </div>
+              <div class="form-group">
+                <label for="clienteMensagem">Mensagem</label>
+               <textarea  id="clienteMensagem" class="form-control" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar Mensagem</button>  
+        </form>
+    </div>
 {% endblock content %}
     
